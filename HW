@@ -1,3 +1,6 @@
 #!/bin/bash
 
 echo "Hello World"
+ip addr show enp5s0f0 | grep 'inet ' | awk '{print $2}' | cut -f1 -d'/'
+ip addr show enp5s0f1 | grep 'inet ' | awk '{print $2}' | cut -f1 -d'/'
+echo $ip
